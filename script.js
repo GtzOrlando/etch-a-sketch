@@ -9,7 +9,7 @@ let activeColor = colors[0];
 let a = 100;
 let b = 100;
 
-for(let i = 10000; i != 0; i--) {
+for(let i = 0; i != 10000; i++) {
     var squareDIV = document.createElement('div');
     squareDIV.classList.add('square');
     squareDIV.onmouseover = function() {
@@ -40,7 +40,7 @@ function changeColor(x) {
 }
 
 function eraseAll() {
-    for(let e = 0; e != 9999; e++) {
+    for(let e = 0; e != 10000; e++) {
         square[e].style['background-color'] = "white";
     }
 }
@@ -53,6 +53,10 @@ function rainbowMode() {
 
 function changeGrid() {
     
+    for(let i = 0; i != 10000; i++) {
+        square[i].style['display'] = "block";
+    }
+
     eraseAll();
     chooseGridX();
     chooseGridY();
@@ -61,7 +65,7 @@ function changeGrid() {
     let d = 600/a;
     let e = 600/b;
 
-    for(let i = c; i != 9999; i++) {
+    for(let i = c; i != 10000; i++) {
         square[i].style['display'] = "none";
     }
 
