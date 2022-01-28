@@ -1,0 +1,68 @@
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    border: solid;
+    width: 600px;
+    height: 600px;
+}
+
+.square {
+    width: 6px;
+    height: 6px;
+    border: none;
+    background-color: white;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#colors {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px;
+    width: 200px;
+    border: solid;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.color {
+    width: 50px;
+    height: 40px;
+    margin: 5px;
+}
+
+.middleBtns, #activeColor, .gridBox {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    border: solid;
+    padding: 10px;
+}
+
+.bigButton {
+    height: 40px;
+    margin: 10px;
+}
+
+.gridBox {
+    min-height: 90px;
+}
+
+.title {
+    text-align: center;
+    font-weight: bold;
+}
+
+.activeColor {
+    background-color: black;
+}
+
+.squaresXY {
+    margin-top: 3px;
+    text-align: center;
+}
