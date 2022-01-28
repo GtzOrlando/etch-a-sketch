@@ -6,6 +6,8 @@ const squaresXY = document.getElementsByClassName("squaresXY");
 const rainbow = ["violet", "indigo", "blue", "green", "yellow", "orange", "red"];
 const colors = ["black", "gray", "white", "brown", "purple", "violet","indigo", "blue", "green", "yellow", "orange", "red", rainbow];
 let activeColor = colors[0];
+let a = 100;
+let b = 100;
 
 for(let i = 10000; i != 0; i--) {
     var squareDIV = document.createElement('div');
@@ -50,13 +52,14 @@ function rainbowMode() {
 }
 
 function changeGrid() {
-    let a = prompt("How many squares in X?", "max:100");
-    let b = prompt("How many squares in Y?", "max:100");
+    
+    eraseAll();
+    chooseGridX();
+    chooseGridY();
+
     let c = a * b;
     let d = 600/a;
     let e = 600/b;
-
-    eraseAll();
 
     for(let i = c; i != 9999; i++) {
         square[i].style['display'] = "none";
@@ -67,4 +70,18 @@ function changeGrid() {
         square[i].style['height'] = e + "px";
     }
     squaresXY[0].textContent = a + "x" + b;
+}
+
+function chooseGridX() {
+    a = prompt("How many squares in X (max:100; min:1)?", "100");
+    if (isNaN(a) || a > 100 || a < 1) {
+        chooseGridX();
+    }
+}
+
+function chooseGridY() {
+    b = prompt("How many squares in Y (max:100; min:1)?", "100");
+    if (isNaN(b) || b > 100 || b < 1 ) {
+        chooseGridY();
+    }
 }
